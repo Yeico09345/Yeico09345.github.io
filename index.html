@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Día Mamá - De tus 4 hijos</title>
+    <title>Feliz Día Mamá - De tus 3 hijos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -49,6 +49,23 @@
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
+        
+        .memory-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .memory-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .special-section {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body class="bg-gradient-to-b from-pink-50 to-pink-100 min-h-screen font-poppins">
@@ -56,12 +73,11 @@
         <!-- Header -->
         <header class="text-center mb-12">
             <h1 class="text-5xl md:text-6xl font-dancing text-pink-600 mb-4">Feliz Día Mamá</h1>
-            <p class="text-xl text-gray-700">Con todo nuestro amor, tus 4 hijos</p>
+            <p class="text-xl text-gray-700">Con todo nuestro amor, tus 3 hijos</p>
             <div class="mt-6 flex justify-center space-x-2">
-                <div class="w-8 h-8 rounded-full bg-pink-400 flex items-center justify-center text-white font-bold">1</div>
-                <div class="w-8 h-8 rounded-full bg-pink-300 flex items-center justify-center text-white font-bold">2</div>
-                <div class="w-8 h-8 rounded-full bg-pink-200 flex items-center justify-center text-white font-bold">3</div>
-                <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center text-white font-bold">4</div>
+                <div class="w-8 h-8 rounded-full bg-pink-400 flex items-center justify-center text-white font-bold">Y</div>
+                <div class="w-8 h-8 rounded-full bg-pink-300 flex items-center justify-center text-white font-bold">B</div>
+                <div class="w-8 h-8 rounded-full bg-pink-200 flex items-center justify-center text-white font-bold">J</div>
             </div>
         </header>
 
@@ -72,14 +88,14 @@
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
                         <div class="photo-frame rounded-lg overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1529631176507-0e8f9a4eefd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                            <img src="https://media-hosting.imagekit.io/2f6c7b2fe76d469f/IMG_3227.png?Expires=1841592807&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=L2OvRv0CA9ZfFRGrqpvHP7IEmR2FugvgpI3cFh4djf7aBUHHiU4HXbNkBPfPbLzaO3JjJ2FRSs1eeFbTNHcNWb9grK77E2r2moKkig5-tqLivtNmZVt07Z8KM6fUp6IrvE2AX812B5v4VZxab5xZ0d25qcik2xodx~5WjUEJIcnypje7NkLGnYrQm3MOvvo80sjLPqiBsGlVEeNRu5cxCxHQoI3Xyd6IHJjsEfcDLJstwTpKsm1y9qvp7SRSZejaGfLd3w2KhbvMNua~pE~3uDsPeK6wjsHkw5KFB~6t5veLnCjnUwihbRHwSzkGu69aUVw6KM6l18Yg2~MHDU~sEw__" 
                                  alt="Mamá con sus hijos" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="md:w-1/2">
-                        <h2 class="text-3xl font-dancing text-pink-600 mb-4">Para la mejor mamá del mundo</h2>
-                        <p class="text-gray-700 mb-4">Mamá, en este día especial queremos recordarte lo importante que eres para nosotros. Eres nuestro pilar, nuestra guía y nuestro mayor ejemplo de amor incondicional.</p>
-                        <p class="text-gray-700 mb-6">Como el hijo mayor, he tenido el privilegio de verte criar no solo a mí, sino también a mis 3 hermanos con la misma dedicación y cariño. Eres increíble.</p>
+                        <h2 class="text-3xl font-dancing text-pink-600 mb-4">Para la mejor mamá del mundo y la mejor abuela del mundo</h2>
+                        <p class="text-gray-700 mb-4">Mamá, en este día especial Te quiero recordarte lo importante que eres para mi. Eres mi pilar, mi guía y mi mayor ejemplo de amor incondicional.</p>
+                        <p class="text-gray-700 mb-6">Como el hijo mayor, he tenido el privilegio de verte criar no solo a mí, sino también a mis hermanos con la misma dedicación y cariño. Eres increíble. También tu abuela por criar no solo a 4 sino a 8 personas que entre si se quieren mucho gracias al amor incondicional que nos das. Esto va también para Yanny y Aurora que estaban conmigo en ese dia.</p>
                         <button id="loveBtn" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-medium transition duration-300 flex items-center">
                             <i class="fas fa-heart mr-2"></i> Haz clic para ver nuestro amor
                         </button>
@@ -91,51 +107,85 @@
             <section class="mb-16 bg-pink-50 rounded-2xl p-8 shadow-lg">
                 <h2 class="text-3xl font-dancing text-pink-600 mb-6 text-center">Un mensaje especial del hijo mayor</h2>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <p class="text-gray-700 mb-4">Querida mamá,</p>
-                    <p class="text-gray-700 mb-4">Ser el mayor de cuatro hermanos me ha dado una perspectiva única de tu amor y sacrificio. He visto cómo te desvives por cada uno de nosotros, adaptando tu amor a nuestras personalidades y necesidades diferentes.</p>
-                    <p class="text-gray-700 mb-4">Recuerdo cuando llegó mi primer hermano y pensé que tendrías menos tiempo para mí, pero en cambio, tu corazón simplemente creció. Lo mismo pasó con el segundo y el tercero. Eres como un pozo sin fondo de amor.</p>
+                    <p class="text-gray-700 mb-4">Querida mamá y mami,</p>
+                    <p class="text-gray-700 mb-4">Ser el mayor de tres hermanos me ha dado una perspectiva única de su amor y sacrificio. He visto cómo te desvives por cada uno de nosotros, adaptando tu amor a nuestras personalidades y necesidades diferentes.</p>
+                    <p class="text-gray-700 mb-4">Recuerdo cuando llegó mi primer hermano y pensé que tendrías menos tiempo para mí, pero en cambio, tu corazón simplemente creció. Lo mismo pasó con el segundo. Eres como un pozo sin fondo de amor.</p>
                     <p class="text-gray-700">Hoy, en nombre de mis hermanos y mío, queremos decirte que te amamos más que a nada en este mundo. Gracias por ser nuestra mamá.</p>
+                    <p class="text-gray-700 mb-4"> también tu mami que siempre nos tratas de cuidar aun que no puedas estar aqui eso lo aprecio mucho aun que no pueda demostrarlo tan obvio siempre las quiero mucho y por igual</p>
+                </div>
+            </section>
+
+            <!-- Mami y Yo Section -->
+            <section class="mb-16 special-section p-8">
+                <h2 class="text-3xl font-dancing text-pink-700 mb-8 text-center">Mami y Yo</h2>
+                <p class="text-gray-700 mb-6 text-center">Estos son algunos de nuestros momentos especiales juntos, llenos de amor y alegría.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Foto 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://media-hosting.imagekit.io/7124bd3a56c9435a/cee87604-762e-45f1-94e1-606e6325cd4f.jpeg?Expires=1841594979&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=AdwvAVIxmOLgnB~kTwZU7XM~w5mNF5HxFOiev5VooGZoQsqk1554QT-YLt6v9Yzyh58MAme1ntc3JB2sdNOa5EVr8MHkU-UCCSlK7vuCbvFqUCeA-FnVWWBx3EBg~OZKJjBqPRHmfNQ2land4WXjc4XY8uD4Zpkc5tY5~FspqEkNgQsGmhCyIr0ILPkNB7m8yeksIR8xxBDQtfXZX411T2YtW6chDlibGSf3Cyh0wt39fCuenuzWtMBqkCwYJyK53VKZZYXtpzVRVEH0-mOlTk-8IoErG0wNc1urDkGUWu-gIPbcPUNt6gKmkcA5XUsZvuQVTsshlAzCK0Hy1ibqMQ__" 
+                             alt="Mami y yo" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-pink-600 text-center">Nuestro primer recuerdo</h3>
+                            <p class="text-gray-600 text-sm text-center mt-1">Cuando todo comenzó</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 2 - Risas compartidas -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://media-hosting.imagekit.io/71d07461e3de4c41/IMG_3249.jpeg?Expires=1841594987&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=VAvh7WxG9L7Vtvpo0pK6HuOfKUvae5L0jfJid6hQaPssUWeGQpXswfWLjRS5FlR86-s7Zj5LbvudXsix51bwq5FjH6oNe3vj45tGMgZHS~PFnU4lui6Vw0H3mFQwv0WZNR49YYOtruPdMvl7rAD3oSWT3YbJrGWaUVE~MsGkgv~MMkbRvTUJ~d4YBJqWXjOVLFDOVoDJqOUsJP302DvBQHIOtMJF014n~GzzFhKb12bnXzbrJ9fd0IHWdQG0mQ-gU5o9gFqxyrEA8q4jyagDn0DJQ2VWdl8E9NXKT5iYCQolCvcQCl6gFCKC~ZEpHXgkpBn1Cn9o9qACaf1EFffKWg__" 
+                             alt="Risas compartidas" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-pink-600 text-center">Risas compartidas</h3>
+                            <p class="text-gray-600 text-sm text-center mt-1">Momentos de felicidad</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Foto 3 - Aventuras juntos -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:scale-105 transition duration-300">
+                        <img src="https://media-hosting.imagekit.io/aef5f0eb878f495c/IMG_3250.jpeg?Expires=1841594994&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=2HUY7FuBpsn-ygpLA90m10ywnziCwE6kSBE5ZVBMC7UJG6f5EYu~~IPGy2zvGZ71tiO9iXcMuHcO17iUJmdandfK5f2YaQwEkS5MSMUJSAvkkgSypRIC8FA3VfdX7tRUreU3ovI3rn~KIx-3kztM767sOyPaFp836ljWlLKrrgb-ANg002pxT-sfd1eGTYAuAskLD4qsfYh3U88MwNjBTP-dcaqa2HPp4Gu1-Q8QPC02aabx17T-NwX96ihuu0zbLJZ2NmX6essaR3NV-tl8b6vTYz9cmpslsMXflsR~SZ5fjd2W4RR4Yq4Ix5JJYAL1rWJxQmHJ59AiVXLAd1-Fkw__" 
+                             alt="Aventuras juntos" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-pink-600 text-center">Aventuras juntos</h3>
+                            <p class="text-gray-600 text-sm text-center mt-1">Explorando el mundo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-700 italic">"El amor de una madre es el combustible que le permite a un ser humano hacer lo imposible aun que no estabas siempre yo siempre te quise y siempre te querre"</p>
                 </div>
             </section>
 
             <!-- Siblings Section -->
             <section class="mb-16">
-                <h2 class="text-3xl font-dancing text-pink-600 mb-8 text-center">Los 4 que te adoran</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Oldest child -->
+                <h2 class="text-3xl font-dancing text-pink-600 mb-8 text-center">Los 3 que te adoran</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Yeico -->
                     <div class="bg-white p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition duration-300">
                         <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-4xl text-pink-500">
                             <i class="fas fa-crown"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-pink-600 mb-2">El Mayor</h3>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Yeico</h3>
                         <p class="text-gray-600">El primero en llamarte mamá, el que abrió el camino para los demás.</p>
                     </div>
                     
-                    <!-- Second child -->
+                    <!-- Brian -->
                     <div class="bg-white p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition duration-300">
                         <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-4xl text-pink-500">
                             <i class="fas fa-star"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-pink-600 mb-2">El Segundo</h3>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Brian</h3>
                         <p class="text-gray-600">El que confirmó que tu amor podía multiplicarse sin dividirse.</p>
                     </div>
                     
-                    <!-- Third child -->
+                    <!-- Jhowell y Jaden-->
                     <div class="bg-white p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition duration-300">
                         <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-4xl text-pink-500">
                             <i class="fas fa-heart"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-pink-600 mb-2">El Tercero</h3>
-                        <p class="text-gray-600">El que demostró que tu paciencia y amor no tienen límites.</p>
-                    </div>
-                    
-                    <!-- Fourth child -->
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center transform hover:scale-105 transition duration-300">
-                        <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-pink-100 flex items-center justify-center text-4xl text-pink-500">
-                            <i class="fas fa-baby"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-pink-600 mb-2">El Pequeño</h3>
-                        <p class="text-gray-600">El que completó nuestro cuadro familiar perfecto.</p>
+                        <h3 class="text-xl font-bold text-pink-600 mb-2">Jhowell y Jaden</h3>
+                        <p class="text-gray-600">Los que completamos tu cuadro familiar perfecto.</p>
                     </div>
                 </div>
             </section>
@@ -144,29 +194,42 @@
             <section class="mb-16">
                 <h2 class="text-3xl font-dancing text-pink-600 mb-8 text-center">Nuestros Recuerdos</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <!-- Yeico -->
                     <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="https://images.unsplash.com/photo-1576039554269-f4d7e72c4b92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
-                             alt="Familia disfrutando en el parque" class="w-full h-48 object-cover">
+                        <img src="https://media-hosting.imagekit.io/74d19b394a2a4376/yo.jpeg?Expires=1841591352&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZVmmtVe5V-680hCofc1Xub3yaI4MEUw0YSt2q4XhJrnTAR51Yb1jCQaX4j21fs-32qSNvol4UP7GDM0mgcVY9ztFurhOBPewrLg2iBLh9s6igE~UgVqmnDfAK0GB16-PJMNpFvSsvLtG7oq-GrDMP7TkwY0enBiu8MmuoogkNPRYi9q-vxsxYc3sPhs0vYnTvdRSvch9~daWmVocsr1mZrZBCIAeTMiIAHa8UXGChFfL1i-x1sVegG48E-kecM6dKb0k9cb4omD9fbBDdZ~SqXLc4Tu6MJ0saHq9R37v1ZpFsodivemewfa5sAeo9nHOWOqFOz5eSb1~I1tA6MblUg__" alt="Yeico" class="memory-img">
+                        <div class="p-3 bg-white">
+                            <p class="text-center font-medium text-pink-600">Tu y yo</p>
+                        </div>
+                    </div>
+                    <!-- Brian -->
+                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://media-hosting.imagekit.io/cfe132c9e3d34195/brian.png?Expires=1841591294&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Sh~Mz0iw9-SMRJaPCuraIw5~~MW3jCMkpk~YbmJG5-clLSrNsfISYX762UtSLaMzd6Oquyq~YEqenPAxDx6-Y54V96KNclVTkyYM0LzmFJuHQLWkZAGVeqjkU5wFpbv-3MWcEor3v99VgbjDGPYzWANKcUKVdbcAR07xvGiZMNipsukrRADdbYnIbO5jFv9PWLpHLqZWtake3DcU2mMG28WDCTCTK~3p5M2Le9-LzUa5XqTRyUGxCaG7vRiOauc9PsHYyiObFz2GNhmv~N3T73Qa3LMqIMs6FJqYd6aRIIe9xUCoa3rq2tvo8DgmCcBIeP1X8JmcfLDcZ3wgZVCNvQ__" alt="Brian" class="memory-img">
+                        <div class="p-3 bg-white">
+                            <p class="text-center font-medium text-pink-600">Tu y Brian</p>
+                        </div>
+                    </div>
+                    <!-- Juntos -->
+                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://media-hosting.imagekit.io/a696807f812643f4/Losdos.png?Expires=1841591226&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BV0nO1vnYts5zN6FGZKGCy~3Fl3SvNOvRVjU1LP6mW0hvkwemXsKerHB8sgf4lF57UaZWx1837RJZ9nrt2kY-JQxNU9W4Xq8LhK1J6tCZaXxwbWGvHUuJUG9gyYt-6W5TLgZzDPcSIdODN47WM8mxNQN-ynNI-Zooz99xv8RoQ4LjUDkbUeXae-k4WBzaRdzPJBFXnFQunrjvpGKP6uQTMmIGvzpmFjiMut~5UBNOXlumtPu2E6d4w9EDSSjI3X23RLBLRxfdJcBjoDPvWeCyWLhMwXD39BPvO3m1R3lgPrpsuICtpNr4ROt0Huj2ozigsRwSRysDcfsBjlO5fWnSQ__" alt="Juntos" class="memory-img">
+                        <div class="p-3 bg-white">
+                            <p class="text-center font-medium text-pink-600">Yo y brian juntos</p>
+                        </div>
+                    </div>
+                    <!-- Imágenes de Unsplash -->
+                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://mail.google.com/mail/u/0?ui=2&ik=304e612bef&attid=0.1&permmsgid=msg-f:1831817705886649639&th=196bec7f84a50d27&view=fimg&fur=ip&permmsgid=msg-f:1831817705886649639&sz=s0-l75-ft&attbid=ANGjdJ8OwLWxHpMfzBQUyog-5tvL0vD_ro21SaY14YZdmvYJKZaWVCbmT9abjt4_EvPqf-QbNbnh16J3ax1M9fhCXcxU07HGTq_7Mb4_a47r4sCzRcLiCmqDFOYx0I4&disp=emb&realattid=ii_196bec6d7a335589de61&zw" 
+                             alt="jhowell" class="memory-img">
+                        <p class="text-center font-medium text-pink-600">Jhowell</p>
                     </div>
                     <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="https://i.ibb.co/W42z2BSq/Img-3238.jpg" 
-                             alt="Hijo mayor sonriendo" class="w-full h-48 object-cover">
+                        <img src="https://mail.google.com/mail/u/0?ui=2&ik=304e612bef&attid=0.2&permmsgid=msg-f:1831817705886649639&th=196bec7f84a50d27&view=fimg&fur=ip&permmsgid=msg-f:1831817705886649639&sz=s0-l75-ft&attbid=ANGjdJ8BnEZe0_LkClVKUn1vH8vg9n2Jt7PPg7YM5O_hPLu19MCggkrgyY-KhyVXk1jEb93gLtzt_hv2ix3LNBat3tgHDxNaTyjRgiq3t-4tldje0TznTj-MlhxvfGw&disp=emb&realattid=ii_196bec77b5564a8c5ee2&zw" 
+                             alt="Jaden" class="memory-img">
+                                  <p class="text-center font-medium text-pink-600">Jaden</p>
                     </div>
                     <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="/mnt/chromeos/MyFiles/Downloads/brian.png" 
-                             alt="Foto con Brian" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="/mnt/chromeos/MyFiles/Downloads/yo.jpeg" 
-                             alt="Foto personal" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="/mnt/chromeos/MyFiles/Downloads/Losdos.png" 
-                             alt="Foto de los dos" class="w-full h-48 object-cover">
-                    </div>
-                    <div class="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                             alt="Abrazos familiares llenos de amor" class="w-full h-48 object-cover">
+                        <img src="https://media-hosting.imagekit.io/01949b4823ac4667/637239f4-c0a0-433d-b091-d90e0018dec3.jpeg?Expires=1841592329&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0k6M6AoH6P1vQ-nZrfcGyrobD4Q3bWfMCqFbl3Gl0sesvHH6aXp-iOcgJh~O4DR5kv2W0p~wSaiEf5i4Ph6ttELLESthkmmVa1Ke4bFlD2jUQ3Z~3hyN75fQZ~m~iFlxqlQ1bAaLMer1HK0leJlaAMpM7WZF2CaLBJTxaddFekmGdPJYETjtLCJMmD99MM7Jobd6eZYX6eCF1Z6rcsul1m1lpbRFQzFGc97gkyCuHOawzntJwuRO~4P2Dx4stS7suEXbHUMkBosRCqdZQvfq-DGgwSJ00IDkCVN-84LrcGD6pNpUaspR-CDWuP3kXA8HYk7W1aHShG85M0KLVZCjjw__" 
+                             alt="mami" class="memory-img">
+                        <p class="text-center font-medium text-pink-600">Mami con nosotros ❤ </p>
                     </div>
                 </div>
             </section>
@@ -184,7 +247,7 @@
                     <i class="fas fa-heart text-pink-500 text-6xl"></i>
                 </div>
                 <h2 class="text-3xl font-dancing text-pink-600 mb-4">Feliz Día de las Madres</h2>
-                <p class="text-gray-700 text-lg mb-6">De tus 4 hijos que te aman más que a nada en este mundo</p>
+                <p class="text-gray-700 text-lg mb-6">De tus 4 hijos que te aman más que a nada en este mundo esto es para tu y mami las quiero mucho :b</p>
                 <div class="floating inline-block">
                     <i class="fas fa-arrow-down text-pink-400 text-2xl"></i>
                 </div>
@@ -193,7 +256,7 @@
 
         <!-- Footer -->
         <footer class="mt-16 text-center text-gray-600 py-6">
-            <p>© 2023 - Creado con ❤️ por tus 4 hijos</p>
+            <p>© 2025 - Creado con ❤️ por Yeico Ventura</p>
         </footer>
     </div>
 
