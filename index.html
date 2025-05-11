@@ -66,6 +66,30 @@
             border-radius: 20px;
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
+        
+        /* Animación de corazón que crece */
+        .heart-grow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            font-size: 1px;
+            color: #ec4899;
+            opacity: 0;
+            z-index: 1000;
+            transition: all 1s ease-out;
+            pointer-events: none;
+        }
+        
+        .heart-grow.active {
+            transform: translate(-50%, -50%) scale(20);
+            font-size: 100px;
+            opacity: 1;
+        }
+        
+        .heart-grow.fade-out {
+            opacity: 0;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-b from-pink-50 to-pink-100 min-h-screen font-poppins">
@@ -153,7 +177,7 @@
                 </div>
                 
                 <div class="mt-8 text-center">
-                    <p class="text-gray-700 italic">"El amor de una madre es el combustible que le permite a un ser humano hacer lo imposible aun que no estabas siempre yo siempre te quise y siempre te querre"</p>
+                    <p class="text-gray-700 italic">"El amor de una madre es el combustible que le permite a un ser humano hacer lo imposible aun que no estabas siempre yo siempre te quise y siempre te querré"</p>
                 </div>
             </section>
 
@@ -260,13 +284,32 @@
         </footer>
     </div>
 
+    <!-- Elemento de corazón que crecerá -->
+    <div id="growingHeart" class="heart-grow">
+        <i class="fas fa-heart"></i>
+    </div>
+
     <script>
         // Love button animation
         const loveBtn = document.getElementById('loveBtn');
         const loveCounter = document.getElementById('loveCounter');
         const counterElement = document.getElementById('counter');
+        const growingHeart = document.getElementById('growingHeart');
         
         loveBtn.addEventListener('click', function() {
+            // Mostrar el corazón que crece
+            growingHeart.classList.add('active');
+            
+            // Después de 1 segundo, comenzar a desvanecer el corazón
+            setTimeout(() => {
+                growingHeart.classList.add('fade-out');
+                
+                // Eliminar el corazón después de que termine la animación
+                setTimeout(() => {
+                    growingHeart.classList.remove('active', 'fade-out');
+                }, 1000);
+            }, 1000);
+            
             // Show the hidden section
             loveCounter.classList.remove('hidden');
             loveCounter.classList.add('animate__animated', 'animate__fadeIn');
